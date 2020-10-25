@@ -1,3 +1,5 @@
+const { compile } = require("ejs");
+
 module.exports.signup_get=(req,res)=>{
     res.render('signUp');
 }
@@ -7,11 +9,16 @@ module.exports.login_get=(req,res)=>{
 }
 
 module.exports.signup_post=(req,res)=>{
-    res.send(' new signUp');
+     const {email,password}=req.body;
+    console.log(email,password);
+    res.send('new signUp');
 }
 
 module.exports.login_post=(req,res)=>{
-    res.send(' new signUp');
+    //res.send('new signUp');
+    const {email,password}=req.body;
+    console.log(email,password);
+    res.send('user login');
 }
 
 
