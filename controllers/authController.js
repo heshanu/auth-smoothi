@@ -1,5 +1,6 @@
 const { compile } = require("ejs");
 const User=require('../models/User');
+const 
 
 module.exports.signup_get=(req,res)=>{
     res.render('signUp');
